@@ -10,7 +10,6 @@ import {
   ActionCreatorMap,
   ActionHandlerMethod,
   EffectHandlerMap,
-  EffectsHandler,
   ActionEffectHandlerMap,
   PickEffectsHandler,
   OmitNever,
