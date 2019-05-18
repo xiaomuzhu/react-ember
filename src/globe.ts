@@ -45,7 +45,6 @@ export interface EffectHandlerMap {
   [key: string]: EffectsHandler
 }
 
-// export type Module = ReturnType<typeof getModal>
 export interface Module<S extends BaseActionState = any> {
   action: ActionCreators<ActionHandlerMap<any>>
   namespace: string
