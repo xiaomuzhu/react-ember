@@ -22,7 +22,7 @@ export const SEP = '/'
 export const rootActions: ActionCreatorMap<any> = {}
 export const rootEffects: EffectHandlerMap = {}
 
-export function getModal<S extends BaseActionState, T extends ActionEffectHandlerMap<S>>(
+export function getModel<S extends BaseActionState, T extends ActionEffectHandlerMap<S>>(
   instance: new (initState: S) => BaseAction<S>,
   initState: S,
   name: string
