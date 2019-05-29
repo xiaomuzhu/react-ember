@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import * as _ from 'lodash'
 import { BaseAction, METHOD_METADATA, ACTION_METADATA } from './action'
 import { dispatch } from './middleware'
 import {

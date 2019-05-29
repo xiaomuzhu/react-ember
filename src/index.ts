@@ -5,3 +5,5 @@ import { Store, AnyAction } from 'redux'
 export function init<T extends ReducerMap = any>(config: Config<T>): Store<RootState, AnyAction> {
   return new Ember<T>(config).init()
 }
+
+export default init

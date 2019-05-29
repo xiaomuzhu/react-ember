@@ -91,7 +91,7 @@ export type PickActionsHandler<Ins> = {
 type Handler<F> = F extends (state: infer S, args: infer P) => infer S
   ? (state: S, args: P) => S
   : never
-export type IActions<Ins> = {
+export type ActionHandlerMapFromModel<Ins> = {
   [K in keyof Ins]: Ins[K] extends EffectsHandler ? EffectsHandler : Handler<Ins[K]>
 }
 

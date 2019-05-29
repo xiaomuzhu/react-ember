@@ -56,6 +56,9 @@
       "tsx",
       "js"
     ],
+    "globals": {
+      "window": true
+    },
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "/test/"
