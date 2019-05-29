@@ -82,6 +82,7 @@ function each<S extends BaseActionState>(
 
 function getReducer<S extends BaseActionState>(reducers: ActionHandlerMap<S>, initialState: S) {
   return (state: S = initialState, action: Action): S => {
+    // tslint:disable-next-line: strict-type-predicates
     if (typeof reducers[action.type] === 'function') {
       return reducers[action.type](state, action.payload)
     }
