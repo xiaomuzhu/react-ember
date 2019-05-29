@@ -14,7 +14,7 @@ npm i react-ember
 
 ```
 
-
+[example](https://github.com/xiaomuzhu/react-ember-demo)
 
 ### why
 
