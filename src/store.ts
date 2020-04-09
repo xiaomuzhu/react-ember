@@ -4,22 +4,15 @@
  * @Email: meituandxy@gmail.com
  * @Date: 2020-04-07 14:16:37
  * @LastEditors: dxy
- * @LastEditTime: 2020-04-07 23:09:57
- * @FilePath: /situ/src/core/store.ts
+ * @LastEditTime: 2020-04-09 13:39:28
+ * @FilePath: /situ/src/store.ts
  */
 
 import { Observable, Subject, noop, ReplaySubject, Subscription, identity } from 'rxjs'
 import { Reducer } from 'react'
-import {
-  Action,
-  Epic,
-  StoreCreator,
-  Store,
-  StoreAction,
-  StoreCreatorReturnType,
-  ImmerReducer
-} from './types'
+import { Action, Epic, StoreCreator, Store, StoreAction, StoreCreatorReturnType } from './types'
 import { StoreSymbol } from './symbols'
+import { TERMINATE_ACTION } from './constants'
 
 export const createStore = <S>(
   reducer: Reducer<S, Action<unknown>>,
@@ -35,7 +28,12 @@ export const createStore = <S>(
     let appState = defaultState
 
     const dispatch = <T>(action: StoreAction<T>) => {
-      if (action.store && action.store !== store && action.type) {
+      if (
+        action.store &&
+        action.store !== store &&
+        action.type &&
+        action.type !== TERMINATE_ACTION.type
+      ) {
         action.store.dispatch(action)
         return
       }

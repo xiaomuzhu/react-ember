@@ -4,8 +4,8 @@
  * @Email: meituandxy@gmail.com
  * @Date: 2020-04-08 16:00:01
  * @LastEditors: dxy
- * @LastEditTime: 2020-04-08 17:55:59
- * @FilePath: /demo-ts/src/core/index.ts
+ * @LastEditTime: 2020-04-09 13:41:04
+ * @FilePath: /situ/src/situ.ts
  */
 import 'reflect-metadata'
 export * from './decorators'
@@ -14,5 +14,6 @@ export * from './model'
 export * from './store'
 export * from './symbols'
 export * from './types'
+export * from './devtool'
 
 export * from '@asuka/di'
